@@ -114,7 +114,10 @@ function calcularPerimetroTriangulo(lado1, lado2, lado3) {
 
     console.log(parseInt(calculoLado2))
     console.log(perimetro)
-    return document.write("El resultado es:" + perimetro);
+
+    const result = document.getElementById("resultado");
+    result.innerHTML = "El resultado es:" + perimetro;
+    //return document.write("El resultado es:" + perimetro);
 
 }
 
