@@ -26,9 +26,9 @@ console.groupEnd("Cuadrado")
 console.group("Triangulo")
 
 //Realiza el calculo del perimetro del triangulo
-function perimetroTriangulo(lado1, lado2, lado3, base) {
+function perimetroTriangulo(lado1, lado2, base) {
     console.log('base', base);
-    return lado1 + lado2 + lado3 + base;
+    return lado1 + lado2  + base;
 }
 
 //----------------------------------------------
@@ -104,20 +104,19 @@ function calcularPerimetroTriangulo(lado1, lado2, lado3) {
 
     var calculoLado1 = document.getElementById("lado1").value;
     var calculoLado2 = document.getElementById("lado2").value;
-    var calculoLado3 = document.getElementById("lado3").value;
     var base = document.getElementById("base").value;
 
     console.log('base', base);
-    console.log(parseInt(calculoLado1), parseInt(calculoLado2), parseInt(calculoLado3))
+    console.log(parseInt(calculoLado1), parseInt(calculoLado2), parseInt(base));
 
-    const perimetro = perimetroTriangulo(parseInt(calculoLado1), parseInt(calculoLado2), parseInt(calculoLado3), parseInt(base));
+    const perimetro = perimetroTriangulo(parseInt(calculoLado1), parseInt(calculoLado2), parseInt(base));
 
     console.log(parseInt(calculoLado2))
     console.log(perimetro)
 
     const result = document.getElementById("resultado");
-    result.innerHTML = "El resultado es:" + perimetro;
-    //return document.write("El resultado es:" + perimetro);
+    //result.innerHTML = "El resultado es:" + perimetro;
+    return document.write("El resultado es:" + perimetro);
 
 }
 
